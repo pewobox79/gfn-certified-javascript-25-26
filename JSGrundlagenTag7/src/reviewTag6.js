@@ -48,4 +48,3 @@ console.log('d', d)
 //const resultFromCalc = calcTwoNumbers(10, 20)
 //console.log("reviewtag 6 resultfromcalc", resultFromCalc)
 mySecondFunction()
-
