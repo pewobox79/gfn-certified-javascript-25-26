@@ -30,7 +30,7 @@
 */
 const TAX_VALUE = 1.19;
 const amountOfProducts = Number(prompt('How many products are in Your list?'));
-const shoppingList = [];
+const shoppingList = new Array();
 
 function addNewProduct(i){
     let product = prompt(`please enter the ${i + 1} product:`)
