@@ -48,3 +48,14 @@ console.log("csv", csvToData[0].split(', '))
 const [productName, category, price] = csvToData[0].split(',')
 
 console.log("ausgabe: ", `${productName.trim()} | ${category.trim()} | ${price.trim()}`)
+
+
+
+
+function myName(myName){
+    return "may name is" + myName
+}
+
+myName("peter")
+
+console.log("myName('Peter'): ", myName("peter"))
