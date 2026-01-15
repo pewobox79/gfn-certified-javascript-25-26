@@ -21,7 +21,7 @@ function createPost(newPost) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             posts.push(newPost)
-            const error = false // hebel für den promise effect
+            const error = true // hebel für den promise effect
 
             if (!error) {
                 resolve()
@@ -37,9 +37,16 @@ function createPost(newPost) {
 
 // async - await ist eine elegantere option mit promises umzugehen
 
-async function init(){
-    await createPost({title: "mein async post", body: 'body async'})
-    getPosts()
+async function init() {
+    try {
+        await createPost({ title: "mein async post", body: 'body async' })
+        getPosts()
+
+    } catch (err) {
+        console.log("error", err)
+        document.body.innerHTML = `<h2>${err}</h2>`
+
+    }
 }
 
 init()
