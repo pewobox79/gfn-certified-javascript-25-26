@@ -26,7 +26,7 @@ function createPost(newPost) {
             if (!error) {
                 resolve()
             } else {
-                reject({ msg: "error: promise rejected" })
+                reject("error: promise rejected")
             }
 
         }, 2000)
@@ -35,13 +35,11 @@ function createPost(newPost) {
 
 }
 
-createPost({ title: "mein post", body: "mein body" })
-    .then(getPosts)
-    .catch((error) => {
-        document.body.innerHTML = `<div>${error.msg}</div>`
-    })
-    .finally(() => {
-        setTimeout(() => {
-            alert("das ist finally")
-        }, 2000)
-    })
+// async - await ist eine elegantere option mit promises umzugehen
+
+async function init(){
+    await createPost({title: "mein async post", body: 'body async'})
+    getPosts()
+}
+
+init()
