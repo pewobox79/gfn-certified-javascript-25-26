@@ -25,7 +25,7 @@ function sumRangeRecursive(n, total = 0) {
 
 }
 
-console.log(sumRangeRecursive(3))
+console.log(sumRangeRecursive(5))
 
 /**
  * sumRangeRecursive(3,0)
