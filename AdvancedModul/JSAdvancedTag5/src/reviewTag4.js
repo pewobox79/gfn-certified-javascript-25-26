@@ -78,11 +78,6 @@ function optimizeImages() {
 
 }
 
-
-function generateAssets() {
-    return Promise.all([exportLogo(), reviewCopy(), optimizeImages()])
-}
-
 function deploySite(assets) {
     console.log("start deployment with following assets: ", assets)
     return new Promise((resolve, reject) => {
@@ -98,11 +93,22 @@ function deploySite(assets) {
 
 
 }
+
+function generateAssets() {
+    return Promise.all([exportLogo(), reviewCopy(), optimizeImages()])
+}
 //PROMISE VARIANTE
-/* generateAssets()
+generateAssets()
     .then((res) => deploySite(res))
-    .then(deploymentResult => console.log(deploymentResult))
-    .catch(err=>console.log("deployment error", err)) */
+    .then(deploymentResult => {
+
+        if(deploymentResult === "tolle Seite"){
+            console.log("if fall")
+        }else{
+            console.log("else fall")
+        }
+    })
+    .catch(err=>console.log("deployment error", err))
 
 
 // async handling?
@@ -111,7 +117,14 @@ async function deploySiteAsync() {
     try {
         const assets = await generateAssets();
         const deploymentResult = await deploySite(assets)
-        console.log("successfull try: ",deploymentResult)
+
+        if(deploymentResult === "tolle Seite"){
+            console.log("if fall")
+        }
+        else {
+            console.log("successfull try: ", deploymentResult)
+        }
+        
     } catch (error) {
         console.log("error (async): ", error);
     }
