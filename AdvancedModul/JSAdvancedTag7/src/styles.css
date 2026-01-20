@@ -21,3 +21,31 @@ body {
     color: white;
     font-size: 2rem
 }
+
+/*ARTICLE ITEMS*/
+
+.articleItemWrapper{
+    display: flex;
+    width: 100%;
+    min-height: 120px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 5px 0
+}
+
+.articleItemInner{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+}
+
+.articleBtn{
+    max-height: 50px;
+    font-size: 1.2rem;
+    margin: auto;
+    max-width: 100px;
+}
+
+.read{
+    background-color: purple;
+}
