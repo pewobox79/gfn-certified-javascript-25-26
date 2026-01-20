@@ -1,0 +1,23 @@
+body {
+    background-color: antiquewhite;
+}
+
+.btn{
+    background-color: red;
+    outline: 2px soild yellow;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 12px
+}
+
+.btn:hover{
+
+    background-color: yellow;
+    color: purple;
+    border: 0
+}
+
+.activeColor{
+    color: white;
+    font-size: 2rem
+}
