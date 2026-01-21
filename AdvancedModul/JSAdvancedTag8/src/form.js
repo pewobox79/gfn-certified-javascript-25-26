@@ -13,6 +13,7 @@ let userData = {
     email: ''
 }
 
+
 function handleChange(e) {
     const { value, name } = e.target
     console.log(name, value)

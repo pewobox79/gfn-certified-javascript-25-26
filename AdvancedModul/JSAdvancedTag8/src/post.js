@@ -7,40 +7,41 @@ const titleInput = document.getElementById('title')
 const bodyInput = document.getElementById('body')
 const postBtn = document.getElementById('postSubmit')
 const outputElement = document.getElementById('output')
-console.log(titleInput, bodyInput)
+const postForm = document.getElementById('postForm')
 
-let postData ={
+let postData = {
     title: '',
     body: ''
 }
-function handlePostChange(e){
-    const {name, value} = e.target
-    postData ={
+
+titleInput.value = postData.title
+bodyInput.value = postData.body
+function handlePostChange(e) {
+    const { name, value } = e.target
+    postData = {
         ...postData,
-        [name]:value
+        [name]: value
     }
 }
 
-async function apiRequset(data){
-
+async function apiRequset(data) {
     const url = 'https://jsonplaceholder.typicode.com/posts'
-
-    const config ={
+    const config = {
         method: 'POST',
-        headers:{
+        headers: {
             'content-type': 'application/json; charset=UTF-8'
         },
-        body:JSON.stringify(data)
+        body: JSON.stringify(data)
     }
 
-    try{
+    try {
         const res = await fetch(url, config)
-        if(!res.ok){
-            throw Error('something went wrong')
+        if (!res.ok) {
+            return null
         }
         return await res.json()
 
-    }catch(err){
+    } catch (err) {
 
         throw Error(`Network error ${err?.message}`)
 
@@ -49,17 +50,23 @@ async function apiRequset(data){
 
 }
 
-async function sendPostData(e){
+async function sendPostData(e) {
     e.preventDefault()
     const res = await apiRequset(postData)
 
-    if(!res){
+    if (res) {
         outputElement.innerText = "Something went wrong"
+        return
     }
 
     outputElement.innerText = `Der Artikel mit dem Title ${res.title} ist erfolgreich gespeichert worden!`
 
-    console.log("res api", res)
+    postData = {
+        title: "",
+        body: ""
+    }
+
+    postForm.reset()
 }
 
 titleInput.addEventListener('change', handlePostChange)
