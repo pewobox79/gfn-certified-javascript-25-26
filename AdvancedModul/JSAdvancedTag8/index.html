@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM - Tag 3</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+</head>
+
+<body>
+    <div id="root">
+        <h1 class="heading">DOM - Client Input und Verarbeitung</h1>
+
+        <h4>neuer Input für heading</h4>
+        <input 
+            id="headingInput"
+            type="text" 
+            name="headingUpdate" 
+            style="padding: 10px 30px"
+            placeholder="neues Heading here..."
+        >
+        <br>
+
+        <p class="heading">hallo</p>
+        <p>hallo p 2</p>
+        <p class="heading">hallo</p>
+        <p>hallo p 2</p>
+    </div>
+
+    <h3>Form übung</h3>
+
+    <form>
+        <label for="firstname">Vorname</label>
+        <input id="firstname" name="firstname" type="text"><br>
+        <label for="lastname">Nachname</label>
+        <input id="lastname" name="lastname" type="text"><br>
+        <label for="email">Email Adresse</label>
+        <input id="email" name="email" type="email"><br>
+        <button id="submitBtn" type="submit">Registrieren</button>
+    </form>
+
+
+    <h3>Neuen Post hinzufügen</h3>
+
+    <form>
+        <input id="title" name="title" type="text" placeholder="Post Title">
+        <input id="body" name="body" type="text" placeholder="Post Content">
+        <button id="postSubmit" type="submit">Send new Post</button>
+    </form>
+        <div id="output"></div>
+
+    <script src="./src/main.js" async defer></script>
+    <script src="./src/form.js" async defer></script>
+    <script src="./src/post.js" async defer></script>
+</body>
+
+</html>
