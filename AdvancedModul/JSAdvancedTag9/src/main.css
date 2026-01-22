@@ -1,0 +1,26 @@
+.formInner {
+    display: flex; /*default ist flex-direction: row */
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.3rem
+}
+
+.btn {
+    background-color: aqua;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    color: black
+}
+
+.btn:hover{
+    background-color: darkcyan;
+    color: white
+}

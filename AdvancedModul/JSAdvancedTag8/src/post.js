@@ -51,6 +51,7 @@ async function apiRequset(data) {
 }
 
 async function sendPostData(e) {
+    postBtn.disabled = true
     e.preventDefault()
     const res = await apiRequset(postData)
 
@@ -67,8 +68,9 @@ async function sendPostData(e) {
     }
 
     postForm.reset()
+    
+    
 }
-
 titleInput.addEventListener('change', handlePostChange)
 bodyInput.addEventListener('change', handlePostChange)
 postBtn.addEventListener('click', sendPostData)

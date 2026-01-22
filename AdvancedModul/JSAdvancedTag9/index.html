@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM - Wiederholung Dynamic rendering</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./src/main.css">
+
+</head>
+
+<body>
+    <h1>Meine ToDo-App</h1>
+    <form>
+        <div>
+            <input id="titleInput" type="text" name="title" placeholder="ToDo Name">
+            <textarea 
+            class="text" 
+            id="descriptionInput" 
+            name="description" 
+            placeholder="Was soll genau passieren?" rows="5">
+                </textarea>
+            <button type="submit" id="submitBtn">Add ToDo</button>
+        </div>
+    </form>
+    
+    <div id="toDoList">
+        <ol >
+            <!--hier die todos -->
+        </ol>
+    </div>
+
+    <script src="./src/main.js" async defer></script>
+
+</body>
+
+</html>
