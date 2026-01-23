@@ -1,3 +1,6 @@
+(function () {
+    console.log("hallo function")
+})()
 // TODO list
 /* 
 * 1. TODO Data {title, beschreibung, isDone}
@@ -25,15 +28,17 @@ const decriptionInput = document.getElementById('descriptionInput')
 const toDoList = $('#toDoList ol')
 const subBtn = document.getElementById('submitBtn')
 
+console.log(toDoList.dataset.tooltip)
 //styling
 innerDiv.setAttribute('class', 'formInner')
 titleInput.classList.add('input')
 decriptionInput.classList.add('input')
 subBtn.classList.add('btn')
 
+   
+
 
 // funktionen
-
 function addNewToDo(e) {
     e.preventDefault()
     if (!newToDoData.description || !newToDoData.title) {

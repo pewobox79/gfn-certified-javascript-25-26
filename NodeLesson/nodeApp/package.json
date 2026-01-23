@@ -1,0 +1,21 @@
+{
+  "name": "my-first-app",
+  "version": "0.0.1",
+  "description": "meine erste applikation mit nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodemodule",
+    "apfel",
+    "banane"
+  ],
+  "author": "peter wolf",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

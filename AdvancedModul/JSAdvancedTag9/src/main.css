@@ -12,7 +12,7 @@
     font-size: 1.3rem
 }
 
-.btn {
+.btnd {
     background-color: aqua;
     font-size: 1.5rem;
     border: none;
@@ -20,7 +20,7 @@
     color: black
 }
 
-.btn:hover{
+.btnd:hover{
     background-color: darkcyan;
     color: white
 }
