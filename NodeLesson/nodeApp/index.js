@@ -1,7 +1,7 @@
-//const userData = require('./src/store/users.js'); => commonJS import version type:commonJS
+//const userData =require('./src/store/users.js'); => commonJS import version type:commonJS
 
 // => ESmodule import version type: module
-import userData from './src/store/users.js'
+import userData from'./src/store/users.js'
 import { sayHello } from './src/helpers/communictionHelper.js'
 import User from './src/classes/userClass.js'
 import { dirname, join } from 'path'
@@ -34,12 +34,35 @@ const __dirname = dirname(__filename)
 
 //datei erstellen und beschreiben
 fs.writeFile(join(__dirname, '/myTestFolder', 'test.txt'), JSON.stringify(userData), err => {
-    if(err) throw err
+    if (err) throw err
     console.log("file written to project")
 
     //erweitern der bestehenden datei test.txt mit neuem daten kontent
-    fs.appendFile(join(__dirname, '/myTestFolder', 'test.txt'), `\n\n ${JSON.stringify([{ name: "wonder woman", age: 44 }, { name: "klausen", age: 120 }]) }`, err =>{
-        if(err) throw err
+    fs.appendFile(join(__dirname, '/myTestFolder', 'test.txt'), `\n\n ${JSON.stringify([{ name: "wonder woman", age: 44 }, { name: "klausen", age: 120 }])}`, err => {
+        if (err) throw err
         console.log("appended text")
     })
 })
+
+const myTestUser = {
+    name: "peter",
+    age: 45,
+    returnNameAndAge() {
+        return this.name + this.age
+    },
+
+}
+
+const jsonData = JSON.stringify(myTestUser)
+console.log("json", jsonData)
+
+const user = {
+
+    age: 44,
+    lastname: 'wolf'
+}
+
+const name = "kjskfjk"
+const userAge = 10
+const { firstname = name, age = userAge } = user
+console.log("firstname", firstname, "age", userAge)

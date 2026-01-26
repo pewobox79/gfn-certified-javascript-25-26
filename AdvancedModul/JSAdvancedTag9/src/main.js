@@ -85,6 +85,6 @@ function renderElements() {
 
 
 //events zuweisen
-titleInput.addEventListener('change', handleChange)
+titleInput.addEventListener('change', () => handleChange())
 decriptionInput.addEventListener('change', handleChange)
 subBtn.addEventListener('click', addNewToDo)
