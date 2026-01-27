@@ -36,6 +36,7 @@ const users = [
 
 //Wir brauchen einen server
 import * as http from 'http'
+import { writeLogFile } from './controller/staticController.js'
 
 const PORT = 3001
 
@@ -78,10 +79,26 @@ http
             }
 
             if (request.method === 'POST') {
-                console.log(request)
-                response.write(`das ist eine post method action`)
-                response.end()
-                return
+                let body = '';
+
+                request.on('data', chunk => {
+                    body += chunk;
+                });
+                
+                request.on('end', () => {
+                    response.writeHead(200, { 'Content-Type': 'text/plain' });
+                    writeLogFile(body)
+                    response.end(`Empfangener Body:\n${body}`);
+                });
+
+                request.on('error', (err) => {
+                    console.error('Fehler beim Lesen des Bodys:', err);
+                    response.writeHead(400);
+                    response.end('Fehler beim Lesen der Anfrage');
+                });
+
+              
+                return;
             }
             return
         }
