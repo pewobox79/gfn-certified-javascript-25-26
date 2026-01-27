@@ -1,6 +1,3 @@
-(function () {
-    console.log("hallo function")
-})()
 // TODO list
 /* 
 * 1. TODO Data {title, beschreibung, isDone}
@@ -11,7 +8,7 @@
 * 6. BONUS: delete todo
 */
 
-let toDoData = []
+//let toDoData = []
 let newToDoData = {
     title: '',
     description: '',
@@ -35,19 +32,21 @@ titleInput.classList.add('input')
 decriptionInput.classList.add('input')
 subBtn.classList.add('btn')
 
-   
+
 
 
 // funktionen
-function addNewToDo(e) {
+async function addNewToDo(e) {
     e.preventDefault()
     if (!newToDoData.description || !newToDoData.title) {
         console.log("data invalid")
         return
     }
-    toDoData.push(newToDoData)
+    const returnedDataFromServer = await sendNewTodoToServer(newToDoData) // anfrage an unseren eigenen server
+    console.log("returned", returnedDataFromServer)
+    //toDoData.push(newToDoData)
     form.reset()
-    renderElements()
+    renderElements(returnedDataFromServer)
     //console.log("updated toDoData", toDoData)
 }
 function handleChange(event) {
@@ -59,6 +58,29 @@ function handleChange(event) {
     //console.log("hallo handle", name, value)
 }
 
+function formatTodDataForServer(originData) {
+    return { data: { newTodo: originData } }
+}
+async function sendNewTodoToServer(newTodo) {
+    const SERVER_URL = 'http://localhost:3001/api/v1/todos'
+    const dataFormated = formatTodDataForServer(newTodo)
+    const config ={
+        method: "POST", 
+        headers:{
+            "content-type": "application/json"
+        },
+        body: JSON.stringify(dataFormated)
+    }
+    try{
+        const res = await fetch(SERVER_URL, config)
+        const data = await res.json()
+        console.log("data return von server", data)
+        return data
+    }catch(err){
+        console.info("error happend", err)
+    }
+
+}
 //element erstellen und rendern
 function createToDoElement(toDo) {
 
@@ -76,15 +98,15 @@ function createToDoElement(toDo) {
     li.append(titleElement, descriptionElement)
     toDoList.append(li)
 }
-function renderElements() {
+function renderElements(updateList) {
     toDoList.innerHTML = '';
-    toDoData.forEach(toDo => {
+    updateList.forEach(toDo => {
         createToDoElement(toDo)
     })
 }
 
 
 //events zuweisen
-titleInput.addEventListener('change', () => handleChange())
+titleInput.addEventListener('change', handleChange)
 decriptionInput.addEventListener('change', handleChange)
 subBtn.addEventListener('click', addNewToDo)
