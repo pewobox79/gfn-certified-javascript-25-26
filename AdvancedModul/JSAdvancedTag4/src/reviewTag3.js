@@ -33,7 +33,10 @@ const navData = {
                 }
             },
             peterslink: {
-                title: "peters link"
+                title: "peters link",
+                items:{
+                    laptop: "ajsfj"
+                }
             }
         }
     },

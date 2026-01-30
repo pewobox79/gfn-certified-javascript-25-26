@@ -1,0 +1,13 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "npx esbuild *.ts --watch --bundle --outfile=assets/js/bundle.js --loader:.ts=ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
