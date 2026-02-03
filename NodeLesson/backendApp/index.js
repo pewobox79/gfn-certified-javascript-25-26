@@ -43,6 +43,20 @@ const PORT = 3001
 http
     .createServer((request, response) => {
 
+        // query string evaluation
+        const parsedUrl = new URL(request.url, `http://${request.headers.host}`);
+        console.log("parsed url", parsedUrl)
+        const queryParams = parsedUrl.searchParams;
+        console.log("query params", queryParams)
+        const id = queryParams.get("meineID")
+        const carid = queryParams.get("carid")
+        const color = queryParams.get("color")
+
+        console.log("query params list",id, carid, color)
+
+
+
+      console.log("id", id)
         if (request.url === '/') {
             response.write("hallo World and family")
             response.end()
@@ -107,3 +121,4 @@ http
         response.end('Error: Page not found')
     })
     .listen(PORT, () => console.log(`Server läuft auf Port ${PORT}`))
+

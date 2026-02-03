@@ -7,6 +7,9 @@ export interface UserType {
     gender: GenderType
     protocols?: [ProtocollType?, ProtocollType?, ProtocollType?, ProtocollType?]
     checkoutShoppingItems: (multiplikator?: number) => number
+    myGenericFunction: ()=>void
+    items: Array<string>
+    items2: string[]
 }
 export interface MyNewUserType extends UserType {
     color: SkinColorType
@@ -36,7 +39,8 @@ type EmployerRoleType = "Chefarzt" | "Assistenzarzt"
 type GenderType = "männlich" | "weiblich" | "diverse" | "er/sie"
 type CityType = string
 type CountryType = "Germany"
-
+type stateType ='inProgress' | 'success' | 'error'
+type state = String
 type AddressType = {
     city: CityType
     zipCode: number
@@ -53,3 +57,18 @@ interface PostType {
 interface PostsType {
     items: Array<PostType>
 }
+
+function getFirstElement<T>(arr: Array<T>): T | undefined {
+
+    return arr.length > 0 ? arr[0] : undefined;
+
+}
+
+getFirstElement<number>([10])
+getFirstElement<string>(["hallo"])
+
+function hallo(value){
+console.log(value)
+}
+
+hallo("peter")

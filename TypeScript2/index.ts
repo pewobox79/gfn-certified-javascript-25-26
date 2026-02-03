@@ -4,7 +4,6 @@ import type { MyNewUserType } from "./src/types/global.ts"
 
 
 //typescipt schema END
-
 const newUser: MyNewUserType = {
     name: "Peter",
     age: 45,
