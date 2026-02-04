@@ -1,0 +1,23 @@
+#react sources
+
+#VITE - Tooling system, damit REACT oder andere Frameworks/Libraries zum Laufen kommen
+https://vite.dev/
+
+#React Docs
+https://react.dev/learn/creating-a-react-app
+
+#React Alternativen => alle gelisteten laufen mit React Logic. Das Gesamtpaket ist allerdings dann differenziert
+https://tanstack.com/start/latest
+https://nextjs.org/docs
+
+
+#React Router => übernimmt das Routing innerhalb von React
+https://reactrouter.com/start/declarative/installation
+
+
+#Theme forest => template Design für diverse Frameworks
+https://themeforest.net/popular_item/by_category?category=site-templates
+
+#BootStrap => design Library
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
