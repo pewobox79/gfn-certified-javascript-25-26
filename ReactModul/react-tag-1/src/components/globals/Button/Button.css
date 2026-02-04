@@ -1,0 +1,17 @@
+.redBtn {
+    background-color: red;
+    border: 1px solid green;
+    border-radius: 10px
+}
+
+.yellowBtn {
+    background-color: yellow;
+    border: 1px dotted red;
+    padding: 10px
+}
+
+.successBtn{
+    border: 2px solid green;
+    background-color: grey;
+    font-size: 2rem
+}
