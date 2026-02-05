@@ -1,0 +1,19 @@
+.userOverviewWrapper{
+    border: 1px solid lightgray;
+    width: 100%;
+    background-color: lightcoral;
+    min-height: 500px;
+    border-radius: 10px;
+}
+
+.itemWrapper {
+    display: flex;
+    background-color: lightgrey;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}

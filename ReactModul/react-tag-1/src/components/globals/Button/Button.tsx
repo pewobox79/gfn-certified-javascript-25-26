@@ -1,4 +1,4 @@
-import './Button.css'
+import styles from '../../../styles/Button.module.css'
 
 interface ButtonType {
     variant: 'alert' | 'info' | 'success'
@@ -7,17 +7,16 @@ interface ButtonType {
     style?: React.CSSProperties
 }
 export default function Button({ variant, title = 'Submit', children, style}: ButtonType){
-
 function btnStyle(variantValue: ButtonType['variant']){
     const styling ={
-        alert: 'redBtn',
-        success: 'successBtn',
-        info: 'yellowBtn'
+        alert: 'redBtnM',
+        success: 'successBtnM',
+        info: 'yellowBtnM'
     }
-    return styling[variantValue]
+    return styles[styling[variantValue]]
 }
     return <button 
-            className={btnStyle(variant)} 
+        className={btnStyle(variant)} 
             style={style && style}
         >
         {children ? children : title}

@@ -1,16 +1,16 @@
-.redBtn {
+.redBtnM {
     background-color: red;
     border: 1px solid green;
     border-radius: 10px
 }
 
-.yellowBtn {
+.yellowBtnM {
     background-color: yellow;
     border: 1px dotted red;
     padding: 10px
 }
 
-.successBtn{
+.successBtnM {
     border: 2px solid green;
     background-color: grey;
     font-size: 2rem

@@ -18,7 +18,6 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-
 a:hover {
   color: #535bf2;
 }
@@ -36,30 +35,6 @@ h1 {
   line-height: 1.1;
 }
 
-footer {
-  min-height: 300px;
-  height:auto;
-  width: 100%;
-  background-color: lightgray;
-  text-align: center;
-}
-
-header {
-  min-height: 200px;
-  height: auto;
-  border: 1px solid green;
-  border-radius: 10px;
-  background-color: lightgoldenrodyellow;
-}
-
-form > input {
-  width: 100%;
-  padding: 10px 0;
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  font-size: 1.3rem
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -71,11 +46,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
 button:hover {
   border-color: #646cff;
 }
-
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -86,11 +59,9 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-
   a:hover {
     color: #747bff;
   }
-
   button {
     background-color: #f9f9f9;
   }
