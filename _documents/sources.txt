@@ -21,3 +21,11 @@ https://themeforest.net/popular_item/by_category?category=site-templates
 #BootStrap => design Library
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
+#box shadow css
+https://getcssscan.com/css-box-shadow-examples
+
+#tailwind css
+https://tailwindcss.com/
+
+
+

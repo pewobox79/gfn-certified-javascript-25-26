@@ -6,6 +6,6 @@ export default function Search(){
         type="text" 
         placeholder="Was suchst du?" 
         />
-        <Button variant="alert"/>
+        <Button variant="alert" action={{ type: "addUser", data: "klaus" }}/>
     </form>
 }
