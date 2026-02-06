@@ -5,5 +5,7 @@ export default function Homepage(){
     return <><h1>Homepage</h1>
     <UserOverview/>
     <Button variant="alert" action={{type: "alarm"}}/>
+    <Button variant="info" action={{type: "addUser", data: "Heinz"}}/>
+    <Button variant="success" action={{type: "addUser", data: "Sabine"}}/>
     </>
 }
