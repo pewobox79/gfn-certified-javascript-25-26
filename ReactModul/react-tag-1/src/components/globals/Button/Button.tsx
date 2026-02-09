@@ -16,7 +16,6 @@ export default function Button({ variant, title = 'Submit', children, style, act
     //wir machen den Button STATEFULL
     const [state, setState] = useState(false);
 
-    console.log("mein State ist", state)
 
     function btnStyle(variantValue: ButtonType['variant']){
         const styling ={
