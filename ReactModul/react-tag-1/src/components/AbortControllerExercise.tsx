@@ -5,7 +5,17 @@ export default function AbortControllerExercise() {
     const [productId, setProductId] = useState<number | undefined>(undefined)
     const [loading, setLoading] = useState(true)
 
+    const buttons = document.querySelectorAll("button")
+    console.log("buttons query selector", buttons)
+
     useEffect(()=>{
+
+        //add new element to client
+        const myDiv = document.createElement("div")
+        myDiv.innerText = "hallo my div"
+        document.body.append(myDiv)
+
+        
         console.log("effect runs")
         //WICHTIG: Abort Controller MUSS INNERHALB von useEffect sein- für jeden neuen Effect braucht es einen eigenen controller, da abort() den 
         //letzten Controller löscht/auflöst 
@@ -23,6 +33,7 @@ export default function AbortControllerExercise() {
             //cleanup
             //ohne einbinden von cleanup laufen parallele effekte. controller.abort() bricht vorherigen effect ab!
             return ()=>{
+                document.body.removeChild(myDiv)
                 console.log("clean runs")
                 controller.abort()
                 setLoading(true)
