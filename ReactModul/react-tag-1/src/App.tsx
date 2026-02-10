@@ -1,12 +1,13 @@
+import AbortControllerExercise from './components/AbortControllerExercise'
+import EffectExercise from './components/EffectExercise'
 import MainLayout from './layouts/MainLayout'
-import Homepage from './pages/Homepage'
 import './styles/App.css'
 
 function App() {
   //diese APP STEHT FÜR UNSEREN ROUTER
 
   return <MainLayout>
-    <Homepage/>
+    <AbortControllerExercise/>
   </MainLayout>
 }
 
