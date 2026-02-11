@@ -27,5 +27,12 @@ https://getcssscan.com/css-box-shadow-examples
 #tailwind css
 https://tailwindcss.com/
 
+#FORMS
+#react form hook
+https://react-hook-form.com/
+
+#Formik 
+https://formik.org/
+
 
 
