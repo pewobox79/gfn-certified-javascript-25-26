@@ -1,4 +1,5 @@
-import { useState, type ChangeEvent, type SubmitEvent } from "react";
+import { useState, type ChangeEvent, type SubmitEvent, useContext } from "react";
+import UserContext from "../../context/UserContext";
 
 interface FormType {
     firstname: string
@@ -6,22 +7,22 @@ interface FormType {
     email: string
     message: string
 }
-
 interface ErrorType {
     firstname?: string
     lastname?: string
     message?: string
     email?: string
 }
-
 const InitValues: FormType = {
     firstname: "",
-    lastname: "",
+    lastname: "sfgasf",
     email: "",
     message: ""
 }
-
 export default function Form() {
+    console.log("form renders")
+
+    const { setUser } = useContext(UserContext)
 
     const [request, setRequest] = useState<FormType>(InitValues);
     const [errors, setErrors]=useState<ErrorType>()
@@ -37,6 +38,7 @@ export default function Form() {
 
         if(Object.keys(errors).length === 0){
             console.log("data will be submitted", request)
+            setUser({firstname: request.firstname, email: request.email})
             setRequest(InitValues) // clear form input fields 
             setErrors({})
         }else {

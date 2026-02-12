@@ -3,6 +3,7 @@ import Button2 from "./globals/Button2";
 
 export default function Search(){
 
+    console.log("search renders")
     function handleBtn2(e:any){
         e.preventDefault()
         console.log("hallo btn 2")
