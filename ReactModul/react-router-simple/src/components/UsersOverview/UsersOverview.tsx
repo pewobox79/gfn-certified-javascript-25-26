@@ -19,7 +19,7 @@ const UsersOverview = () => {
     }, [])
 
     const UserList = users.data.map((user: UserItemType) => {
-        return <UserListItem key={user.id} {...user} />
+        return <UserListItem key={user.id} {...user} lengthOfUsers={users.data.length} />
     })
     return <div>
         <h1>list of users</h1>

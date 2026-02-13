@@ -34,5 +34,10 @@ https://react-hook-form.com/
 #Formik 
 https://formik.org/
 
+#State management advanced
+#ZustandJS
+https://zustand-demo.pmnd.rs/
+
+#useContext
 
 
