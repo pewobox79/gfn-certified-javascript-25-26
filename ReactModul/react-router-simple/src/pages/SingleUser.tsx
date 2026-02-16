@@ -1,6 +1,7 @@
 import { useParams, Link, useSearchParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import BackButton from "../components/globals/BackButton"
+import SearchComplete from "../components/SearchComplete/SearchComplete"
 
 
 interface SingleUserType {
@@ -51,11 +52,13 @@ const SingleUser = () => {
 
     if (Object.keys(selectedUser).length === 0) {
         return <div>No user available
-            <BackButton />
+            <BackButton type="custom" link="/users" label="Back to Overview" />
         </div>
     }
-
     return <>
+
+        <SearchComplete/>
+
         <div className="card text-center">
             <div className="card-header">
                 {selectedUser?.company?.name}
@@ -70,7 +73,7 @@ const SingleUser = () => {
             </div>
         </div>
 
-        <BackButton />
+        <BackButton type="custom" link="/users" label="back to userlist" />
         <br />
         {Number(params.id) > 1 && <Link to={`/users/${Number(params.id) - 1}?max=${maxValue}`} className="btn btn-primary">prev user</Link>}
         {Number(params.id) != Number(maxValue) && <Link to={`/users/${Number(params.id) + 1}?max=${maxValue}`} className="btn btn-secondary">next user</Link>}
