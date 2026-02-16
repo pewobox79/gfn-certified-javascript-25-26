@@ -79,7 +79,6 @@ const SingleUser = () => {
         {Number(params.id) != Number(maxValue) && <Link to={`/users/${Number(params.id) + 1}?max=${maxValue}`} className="btn btn-secondary">next user</Link>}
     </>
 
-
 }
 
 export default SingleUser

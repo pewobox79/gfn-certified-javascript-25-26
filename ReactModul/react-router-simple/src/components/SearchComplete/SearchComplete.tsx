@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { getUsers } from '../../utils/usersHelper';
 import { Link } from 'react-router-dom';
 import { UserItemType } from '../../types/usertypes';
-import { Dispatch, SetStateAction } from 'react';
 import { Option } from 'react-bootstrap-typeahead/types/types';
 
 export default function SearchComplete() {
@@ -13,9 +12,7 @@ export default function SearchComplete() {
     const [userList, setUserList] = useState<UserItemType[]>([])
 
     useEffect(() => {
-
         getUsers().then(data => setUserList(data))
-
     }, [])
 
     function clearSearch() {
