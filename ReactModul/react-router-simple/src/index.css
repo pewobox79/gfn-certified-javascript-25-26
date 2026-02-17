@@ -19,7 +19,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: red;
 }
 
 body {
@@ -54,13 +54,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.isActiveLink {
+  color: red;
+  text-decoration: underline;
+}
+ul > li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color:red;
   }
   button {
     background-color: #f9f9f9;

@@ -6,14 +6,28 @@ import Users from "../pages/Users";
 import SingleUser from "../pages/SingleUser";
 import Posts from "../pages/Posts";
 import SinglePost from "../pages/SinglePost";
+import Dashboard from "../pages/Dashboard";
+import AuthenticationLayout from "../layouts/AuthenticationLayout";
+import Login from "../pages/Login";
+import AuthorizationLayout from "../layouts/AuthorizationLayout";
 
 export const router = createBrowserRouter(createRoutesFromElements(
-    <Route path="/" element={<MainLayout/>}>
-        <Route index  element={<HomePage/>} />
+    <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
         <Route path="about" element={<AboutUs />} />
-        <Route path="users" element={<Users/>} />
-        <Route path='users/:id' element={<SingleUser/>}/>
-        <Route path="posts" element={<Posts/>}/>
-        <Route path="posts/:id" element={<SinglePost/>}/>
+        <Route path="users" element={<Users />} />
+        <Route path='users/:id' element={<SingleUser />} />
+
+        <Route path="posts/:id" element={<SinglePost />} />
+        <Route path="admin/login" element={<Login />} />
+        <Route path="dashboard" element={<AuthenticationLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route element={<AuthorizationLayout />}>
+                <Route path="posts" element={<Posts />} />
+            </Route>
+        </Route>
     </Route>
 ))
+
+// Authentication => Identifizierung des users z.B. OAuth-Service 
+// Authorization => Berechtigung über meine Möglichkeiten über USERROLLEN mit der App zu arbeiten (SuperAdmin, Editor, Reporter)
