@@ -46,3 +46,22 @@ export const getPostById = async (id:number) => {
     }
 
 }
+
+const STRAPI_URL = 'http://localhost:1337/api'
+
+export async function getHomepage(){
+
+    const url = `${STRAPI_URL}/homepage?populate=*`
+    try{
+
+        const response = await fetch(url)
+        if(!response.ok){
+            console.log("error on response")
+        }
+
+        return await response.json()
+    }catch(err){
+
+        console.log("fetch failed")
+    }
+}

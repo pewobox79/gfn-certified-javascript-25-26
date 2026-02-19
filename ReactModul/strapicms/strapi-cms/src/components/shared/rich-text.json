@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_rich_texts",
+  "info": {
+    "displayName": "Rich text",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isMarkdown": {
+      "type": "boolean",
+      "default": false
+    },
+    "body": {
+      "type": "richtext",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isMarkdown"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "body2": {
+      "type": "blocks",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isMarkdown"
+            },
+            false
+          ]
+        }
+      }
+    }
+  }
+}
