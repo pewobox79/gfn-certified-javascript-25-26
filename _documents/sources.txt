@@ -50,3 +50,9 @@ https://media.licdn.com/dms/document/media/v2/D4D1FAQFv8-NOEx-OWA/feedshare-docu
 (achtung. es sind keine javascript dateien - sonder python. Aber das ist egal.)
 
 
+#Query strings mit QS module
+https://www.npmjs.com/package/qs
+
+
+#AXIOS 
+https://axios-http.com/docs/example
