@@ -11,23 +11,24 @@ import AuthenticationLayout from "../layouts/AuthenticationLayout";
 import Login from "../pages/Login";
 import AuthorizationLayout from "../layouts/AuthorizationLayout";
 import DynamicPage from "../pages/DynamicPage";
+import ErrorPage from "../pages/ErrorPage";
 //http://localhost:5173/dynamic/homepage
 export const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="users" element={<Users />} />
-        <Route path="dynamic/:slug" element={<DynamicPage/>}/>
+        <Route path="dynamic/:slug" element={<DynamicPage />} />
         <Route path='users/:id' element={<SingleUser />} />
-
-        <Route path="posts/:id" element={<SinglePost />} />
         <Route path="admin/login" element={<Login />} />
         <Route path="dashboard" element={<AuthenticationLayout />}>
             <Route index element={<Dashboard />} />
             <Route element={<AuthorizationLayout />}>
                 <Route path="posts" element={<Posts />} />
+                <Route path="posts/:id" element={<SinglePost />} />
             </Route>
         </Route>
+        <Route path='*' element={<ErrorPage />} />
     </Route>
 ))
 

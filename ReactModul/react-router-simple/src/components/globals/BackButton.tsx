@@ -4,8 +4,6 @@ import { memo } from 'react';
 
 
 const BackButton =({type = "back", link="", label="Back to Overview", btnColor = "primary"}:BackButtonType)=>{
-
-    console.log("backbutton rendering")
     const isBack = type === "back"
     const navigateTarget = isBack ? -1 : link;
 

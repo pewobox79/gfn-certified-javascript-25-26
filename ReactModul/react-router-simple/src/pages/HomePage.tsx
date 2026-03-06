@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
 import { getHomepage } from "../utils/usersHelper";
-import { getPages } from "../lib/axios/pagesHelper";
 const HomePage = () => {
-    
-        
-    
-    const [homepage, setHomepage] = useState()
+    const [homepage, setHomepage] = useState<{title:string, blocks:{id:string, __component:string, title: string, body: string}[]}>()
     useEffect(() => {
         getHomepage().then(data => setHomepage(data.data))
     }, [])
 
-    console.log("homepage", homepage)
     if (!homepage) return <div>no data</div>
 
     const BlocksList = homepage?.blocks?.map((block) => {
@@ -22,15 +17,11 @@ const HomePage = () => {
         if (block['__component'] === "shared.quote") {
             return <blockquote className=" btn btn-warning" key={key}>{block.title} {block.body}</blockquote>
         }
-
     })
-
-    console.log("blocklist", BlocksList)
     return (
         <>
             <h2>{homepage?.title}</h2>
             <p>Welcome to the home page!</p>
-
             {BlocksList}
         </>
     );

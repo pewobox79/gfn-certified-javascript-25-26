@@ -56,3 +56,9 @@ https://www.npmjs.com/package/qs
 
 #AXIOS 
 https://axios-http.com/docs/example
+
+#DEPLOYMENT
+#provider für den start
+https://www.netlify.com/
+https://vercel.com/
+https://www.heroku.com/

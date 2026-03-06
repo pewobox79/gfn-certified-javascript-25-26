@@ -12,8 +12,6 @@ const AboutUs = () => {
             .then(res => setPages(res.data))
     }, [])
 
-    console.log("pages", pages)
-
     const BlockList = pages?.map((page:{blocks:[]})=>{
 
         return page.blocks.map(component => RenderBlockComponents(component))

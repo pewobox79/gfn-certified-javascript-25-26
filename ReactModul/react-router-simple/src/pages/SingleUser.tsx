@@ -2,6 +2,7 @@ import { useParams, Link, useSearchParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import BackButton from "../components/globals/BackButton"
 import SearchComplete from "../components/SearchComplete/SearchComplete"
+import { getUserByID } from "../utils/usersHelper"
 
 
 interface SingleUserType {
@@ -23,26 +24,6 @@ const SingleUser = () => {
     const maxValue = searchParams.get("max")
 
     const [selectedUser, setSelectedUser] = useState<SingleUserType>({})
-
-    async function getUserByID(userId: number) {
-
-        const url = `https://jsonplaceholder.typicode.com/users/${userId}`
-
-        try {
-
-            const response = await fetch(url)
-            if (!response.ok) {
-                console.log("fetch failed")
-            }
-
-            return await response.json()
-
-        } catch (err) {
-            console.log("error on fetch", err)
-        }
-
-
-    }
 
     useEffect(() => {
         getUserByID(Number(params.id))

@@ -4,7 +4,6 @@ import { DynamicContentQuery } from "../strapi/dynamicQuery";
 
 export async function getPages() {
     const url = BASE_URL_STRAPI + `/api/pages?${DynamicContentQuery}`
-    console.log("url", url)
     try {
 
         const response = await axios.get(url) //.get liefert javascript object
@@ -12,7 +11,6 @@ export async function getPages() {
             console.log("failed to fetch")
             return
         }
-        console.log("res", response)
         return response.data
 
     } catch (err) {
