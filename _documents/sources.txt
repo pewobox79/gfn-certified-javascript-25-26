@@ -62,3 +62,9 @@ https://axios-http.com/docs/example
 https://www.netlify.com/
 https://vercel.com/
 https://www.heroku.com/
+
+
+#npm bundle checker
+https://bundlephobia.com/
+
+
