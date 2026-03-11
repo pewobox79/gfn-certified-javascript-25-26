@@ -67,4 +67,20 @@ https://www.heroku.com/
 #npm bundle checker
 https://bundlephobia.com/
 
+#mobile development
+#react native
+https://reactnative.dev/
+
+#flutter
+https://flutter.dev/
+
+
+#web system analysen
+#browser extensions
+#wappalyzer
+https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=en&utm_medium=user_site&utm_source=options_page
+
+#react developer Tooling
+https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi?utm_source=item-share-cb
+
 
