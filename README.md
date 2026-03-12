@@ -20,6 +20,7 @@ This repository gathers essential documentation, frameworks, styling solutions, 
 * [Mobile Development](#mobile-development)
 * [Developer Tools](#developer-tools)
 * [Git Resources](#git-resources)
+* [Testing](#testing)
 
 ---
 
@@ -218,6 +219,16 @@ https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi?utm_so
 Note: The examples use **Python**, but the Git concepts apply to any programming language.
 
 https://www.youtube.com/watch?v=uGLQF2kUwOA
+
+---
+
+# Testing
+
+### Testing Frameworks
+
+Note: Vite Testing Tool VITEST Documentation.
+
+https://vitest.dev/
 
 ---
 
