@@ -21,6 +21,8 @@ This repository gathers essential documentation, frameworks, styling solutions, 
 * [Developer Tools](#developer-tools)
 * [Git Resources](#git-resources)
 * [Testing](#testing)
+* [Authentication](#Authentication)
+* [Json Web Token](#JWT)
 
 ---
 
