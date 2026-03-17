@@ -257,8 +257,21 @@ Note: E-Recht24 bietet hier umfangreiche Beratung und Tools
 
 https://www.e-recht24.de/
 
+
+Note: IHK Regensburg Checkliste
+
+https://www.ihk.de/regensburg/fachthemen/recht/online-recht-und-datenschutz/eu-datenschutzgrundverordnung/anforderungen-an-websites-nach-der-ds-gvo-4158848
+
 ### google consent
 
 Note: Anleitung wie man google analytics etc. DSGVO Konform einbindet
 
 https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced
+
+### google maps alternative
+
+Note: Alternative zu google maps <iframe> lösung
+
+https://leafletjs.com/download.html
+
+
