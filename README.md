@@ -230,14 +230,33 @@ Note: Vite Testing Tool VITEST Documentation.
 
 https://vitest.dev/
 
----
 
-# Contributing
+# Authentication
 
-If you want to improve this list with additional tools, libraries, or resources, feel free to contribute.
+### Strapi CMS auth
 
----
+Note: anleitung wie man einen authenticated user anlegt und die daten verarbeitet
 
-# License
+https://strapi.io/blog/a-beginners-guide-to-authentication-and-authorization-in-strapi
 
-This repository is intended for educational purposes.
+
+### JWT
+
+Note: JWT (JSON WEB TOKEN) documenation und testing.
+
+https://www.jwt.io/
+
+
+# DSGVO
+
+### Website DSGVO Konform machen
+
+Note: E-Recht24 bietet hier umfangreiche Beratung und Tools
+
+https://www.e-recht24.de/
+
+### google consent
+
+Note: Anleitung wie man google analytics etc. DSGVO Konform einbindet
+
+https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced
