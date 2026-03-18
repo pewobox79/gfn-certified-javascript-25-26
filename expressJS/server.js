@@ -1,16 +1,16 @@
 import express from 'express'
-
 import StudentsRouter from './routes/students.js'
-import dotenv from 'dotenv'
-dotenv.config()
-
-const PORT = process.env.SERVER_PORT || 3001;
+import ProxyRouter from './routes/proxy.js'
+import { PORT } from './utils/tokens.js'
+import cors from 'cors'
 
 //init express app
 const app = express()
 
 //middleware
+app.use(cors())
 app.use(express.json())
+
 
 //routes
 app.get('/', (req, res) => {
@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/students', StudentsRouter)
+app.use('/proxy', ProxyRouter)
 
 
 

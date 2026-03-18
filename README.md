@@ -23,7 +23,8 @@ This repository gathers essential documentation, frameworks, styling solutions, 
 * [Testing](#testing)
 * [Authentication](#Authentication)
 * [Json Web Token](#JWT)
-
+* [Proxy](#PROXY)
+* [DSGVO](#DSGVO)
 ---
 
 # Core React & Tooling
@@ -247,6 +248,15 @@ https://strapi.io/blog/a-beginners-guide-to-authentication-and-authorization-in-
 Note: JWT (JSON WEB TOKEN) documenation und testing.
 
 https://www.jwt.io/
+
+
+# PROXY
+
+### Vergleich PROXY vs VPN
+
+note: Unterschied zwischen Proxy und VPN
+
+https://xvpn.io/resources/proxy-vs-vpn
 
 
 # DSGVO
