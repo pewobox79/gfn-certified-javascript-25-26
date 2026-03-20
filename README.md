@@ -25,6 +25,7 @@ This repository gathers essential documentation, frameworks, styling solutions, 
 * [Json Web Token](#JWT)
 * [Proxy](#PROXY)
 * [DSGVO](#DSGVO)
+* [Experten und Weiterbildung Quellen](#Experts)
 ---
 
 # Core React & Tooling
@@ -283,5 +284,16 @@ https://developers.google.com/tag-platform/security/guides/consent?consentmode=a
 Note: Alternative zu google maps <iframe> lösung
 
 https://leafletjs.com/download.html
+
+# Experts
+
+### Youtube quellen für online Weiterbildung und Experten updates
+
+Note: das sind meine Empfehlungen um sich up-to-date zu halten
+
+https://www.youtube.com/channel/UC6vRUjYqDuoUsYsku86Lrsw
+https://www.youtube.com/@TraversyMedia
+https://www.youtube.com/@WebDevSimplified
+https://www.youtube.com/@maximilian-schwarzmueller
 
 
