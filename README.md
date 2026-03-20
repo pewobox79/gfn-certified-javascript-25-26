@@ -21,11 +21,12 @@ This repository gathers essential documentation, frameworks, styling solutions, 
 * [Developer Tools](#developer-tools)
 * [Git Resources](#git-resources)
 * [Testing](#testing)
-* [Authentication](#Authentication)
-* [Json Web Token](#JWT)
-* [Proxy](#PROXY)
-* [DSGVO](#DSGVO)
-* [Experten und Weiterbildung Quellen](#Experts)
+* [Authentication](#authentication)
+* [JWT](#jwt)
+* [Proxy](#proxy)
+* [DSGVO](#dsgvo)
+* [Experts](#experts)
+
 ---
 
 # Core React & Tooling
@@ -234,31 +235,37 @@ Note: Vite Testing Tool VITEST Documentation.
 
 https://vitest.dev/
 
+---
 
 # Authentication
 
 ### Strapi CMS auth
 
-Note: anleitung wie man einen authenticated user anlegt und die daten verarbeitet
+Note: Anleitung wie man einen authenticated user anlegt und die daten verarbeitet
 
 https://strapi.io/blog/a-beginners-guide-to-authentication-and-authorization-in-strapi
 
+---
 
-### JWT
+# JWT
 
-Note: JWT (JSON WEB TOKEN) documenation und testing.
+### JSON Web Token
+
+Note: JWT documentation and testing.
 
 https://www.jwt.io/
 
+---
 
-# PROXY
+# Proxy
 
-### Vergleich PROXY vs VPN
+### Proxy vs VPN
 
-note: Unterschied zwischen Proxy und VPN
+Note: Unterschied zwischen Proxy und VPN
 
 https://xvpn.io/resources/proxy-vs-vpn
 
+---
 
 # DSGVO
 
@@ -268,32 +275,31 @@ Note: E-Recht24 bietet hier umfangreiche Beratung und Tools
 
 https://www.e-recht24.de/
 
-
 Note: IHK Regensburg Checkliste
 
 https://www.ihk.de/regensburg/fachthemen/recht/online-recht-und-datenschutz/eu-datenschutzgrundverordnung/anforderungen-an-websites-nach-der-ds-gvo-4158848
 
-### google consent
+### Google Consent
 
-Note: Anleitung wie man google analytics etc. DSGVO Konform einbindet
+Note: Anleitung wie man Google Analytics DSGVO-konform einbindet
 
 https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced
 
-### google maps alternative
+### Google Maps Alternative
 
-Note: Alternative zu google maps <iframe> lösung
+Note: Alternative zu Google Maps iframe Lösung
 
 https://leafletjs.com/download.html
 
+---
+
 # Experts
 
-### Youtube quellen für online Weiterbildung und Experten updates
+### YouTube Quellen
 
-Note: das sind meine Empfehlungen um sich up-to-date zu halten
+Note: Empfehlungen um up-to-date zu bleiben
 
 https://www.youtube.com/channel/UC6vRUjYqDuoUsYsku86Lrsw
 https://www.youtube.com/@TraversyMedia
 https://www.youtube.com/@WebDevSimplified
 https://www.youtube.com/@maximilian-schwarzmueller
-
-
